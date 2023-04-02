@@ -131,6 +131,10 @@ app.get('/logout-all', Auth, async (req, res) => {
     }
 })
 
+app.get('/', (req, res) => {
+    return res.send('This is a TODO APP')
+})
+
 app.post('/edit-todo', Auth, async (req, res) => {
     const {id, newTodo} = req.body;
     
